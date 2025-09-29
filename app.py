@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect
 import os
 
-MOVIES_FOLDER = '/home/umbrel/Downloads/movies'
-MUSIC_FOLDER = '/home/umbrel/Downloads/music'
+MOVIES_FOLDER = '/home/umbrel/umbrel/home/Downloads/movies'
+MUSIC_FOLDER = '/home/umbrel/umbrel/home/Downloads/music'
 
 app = Flask(__name__)
 
