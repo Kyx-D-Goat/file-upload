@@ -15,15 +15,23 @@ def upload1():
     file = request.files['file']
     if file:
         os.makedirs(MOVIES_FOLDER, exist_ok=True)
-        file.save(os.path.join(MOVIES_FOLDER, file.filename))
+        save_path = os.path.join(MOVIES_FOLDER, file.filename)
+        print(f"Saving to: {save_path}")
+        file.save(save_path)
+    else:
+        print("No file received in upload1")
     return redirect('/')
 
 @app.route('/upload2', methods=['POST'])
-def upload2():
+def upload1():
     file = request.files['file']
     if file:
         os.makedirs(MUSIC_FOLDER, exist_ok=True)
-        file.save(os.path.join(MUSIC_FOLDER, file.filename))
+        save_path = os.path.join(MUSIC_FOLDER, file.filename)
+        print(f"Saving to: {save_path}")
+        file.save(save_path)
+    else:
+        print("No file received in upload2")
     return redirect('/')
 
 if __name__ == '__main__':
